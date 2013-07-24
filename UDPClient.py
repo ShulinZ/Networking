@@ -1,4 +1,4 @@
-'''CS6843 Shulin Zhang 0494786
+'''CS6843 Shulin Zhang
 '''
 import time
 import socket

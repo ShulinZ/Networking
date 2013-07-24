@@ -1,5 +1,5 @@
 '''
-Shulin Zhang 0494786 NYU-poly CS6843
+Shulin Zhang NYU-poly CS6843
 '''
 #import socket module
 import socket

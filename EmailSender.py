@@ -1,5 +1,5 @@
 '''
-Shulin Zhang 0494786 NYU-poly CS6843
+Shulin Zhang  NYU-poly CS6843
 '''
 import socket
 import ssl
@@ -61,7 +61,7 @@ print '///////////////'
 print "auth login reply " + recv_login
 
 print '///////////////'
-ssl_clientSock.send(base64.b64encode('shulinzhang0225@gmail.com')+'\r\n')
+ssl_clientSock.send(base64.b64encode('123@gmail.com')+'\r\n')
 recv_username = ssl_clientSock.recv(1024)
 print "username reply " + recv_username
 
@@ -71,7 +71,7 @@ recv_pwd = ssl_clientSock.recv(1024)
 print "pwd reply " + recv_pwd #should be accept
 
 
-mailfromCommand = 'MAIL FROM:<shulinzhang0225@gmail.com>\r\n'
+mailfromCommand = 'MAIL FROM:<123@gmail.com>\r\n'
 ssl_clientSock.send(mailfromCommand)
 print ('Sending MAIL FROM command to mailserver...')
 recv2 = ssl_clientSock.recv(1024)
@@ -83,7 +83,7 @@ if recv2[:3]!='250':
 #Send RCPT TO command and print server response.
 #Fill in start
 
-rcpttoCommand = 'RCPT TO:<shulinzhang0225@gmail.com>\r\n'
+rcpttoCommand = 'RCPT TO:<123@gmail.com>\r\n'
 ssl_clientSock.send(rcpttoCommand)
 print ('Sending RCPT TO command to mailserver...')
 recv3 = ssl_clientSock.recv(1024)
@@ -108,8 +108,8 @@ if recv4[:3]!='354':
 
 #message ends with a single period.
 #Fill in start
-ssl_clientSock.send('From: "shulinzhang" <shulinzhang0225@gmail.com>\r\n')
-ssl_clientSock.send('To: "shulinzhang" <shulinzhang0225@gmail.com>\r\n')
+ssl_clientSock.send('From: "123" <123@gmail.com>\r\n')
+ssl_clientSock.send('To: "123" <123@gmail.com>\r\n')
 #send message data.
 #Fill in start
 ssl_clientSock.send(msg)
